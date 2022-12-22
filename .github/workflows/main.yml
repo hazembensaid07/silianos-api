@@ -1,4 +1,4 @@
-name: NCSC  CI_CD
+name: Silianos Rest Api  CI_CD
 
 on:
   push:
