@@ -30,7 +30,7 @@ exports.signup = (req, res) => {
       subject: "Acitivation du compte ",
       html: `
                 <h1>Cliquez sur le lien vpour valider votre compte </h1>
-                 <p>https://fantastic-cat-e69251.netlify.app/activate/${token}</p>
+                 <p>http://0.0.0.0:3000/activate/${token}</p>
                 <hr />
                 <p>Cet Email contient des informations importantes</p>
                
@@ -141,7 +141,7 @@ exports.forgotPassword = (req, res) => {
       subject: `Changement du Mot de passe `,
       html: `
                 <h1>Cliquez sur ce lien pour modilfier votre mot de passe </h1>
-                <p>https://fantastic-cat-e69251.netlify.app/resetpassword/${token}</p>
+                <p>http://0.0.0.0:3000/resetpassword/${token}</p>
              
                 <hr />
               <p>Cet Email contient des informations importantes</p>

@@ -32,7 +32,7 @@ exports.sendEmailWithForVoucher = (emailData) => {
     },
   });
 
-  return transport
+  return transporter
     .sendMail(emailData)
     .then((info) => {
       console.log("okay");
