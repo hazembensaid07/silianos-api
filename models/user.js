@@ -29,6 +29,7 @@ const userScheama = new mongoose.Schema(
       required: true,
       select: false,
     },
+    //used to hash the password
     salt: String,
     role: {
       type: String,
@@ -46,7 +47,7 @@ const userScheama = new mongoose.Schema(
   { timestamps: true }
 );
 
-// virtual
+// virtual schema to hash the password before storing it on db
 userScheama
   .virtual("password")
   .set(function (password) {
@@ -60,11 +61,11 @@ userScheama
 
 // methods
 userScheama.methods = {
-  //verify that the email and the password matches or not
+  //comparing paswword plain text with hashed password
   authenticate: function (plainText) {
     return this.encryptPassword(plainText) == this.hashed_password; // true false
   },
-
+  //hashing  password using sha1 algorithm with salt
   encryptPassword: function (password) {
     if (!password) return "";
     try {
@@ -76,7 +77,7 @@ userScheama.methods = {
       return "";
     }
   },
-
+  //generate the salt for the user
   makeSalt: function () {
     return Math.round(new Date().valueOf() * Math.random()) + "";
   },

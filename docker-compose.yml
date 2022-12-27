@@ -16,9 +16,9 @@ services:
      - JWT_ACCOUNT_ACTIVATION=hdshyeutoasxlmgmbndpo5665820179djskhzaid
      - JWT_SECRET=Jmd=^?Q!jFh5H#py
      - JWT_RESET_PASSWORD=L({GZ4#sMhV4}+{6  
-     - EMAIL=no-reply@contracktime.com
-     - EMAIL_FROM=no-reply@contracktime.com
-     - PASSWORD=N@reply2022
+     - EMAIL=xxxxx
+     - EMAIL_FROM=xxxx
+     - PASSWORD=xxxx
     depends_on:
       -  mongodb
     networks:
